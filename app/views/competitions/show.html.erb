@@ -1,0 +1,64 @@
+<div id="page-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <p id="notice" style="color:orange;"><%= notice %></p>
+      <div class="col-lg-12">
+        <h2 class="page-header" style="margin: 10px 0 15px !important;">Showing Competition Details</h2>        
+        <b><%= link_to 'Edit', edit_competition_path(@competition) %> |
+          <%= link_to 'Back', competitions_path %></b>        
+      </div>
+      <table class="table table-responsive table-bordered">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Cid</th>
+            <th>Title</th>
+            <th>Abbr</th>
+            <th>Category</th>
+            <th>GameFormat</th>
+            <th>Status</th>
+            <th>StatusStr</th>            
+          </tr>
+        </thead>
+        <tbody>          
+          <tr>
+            <td><%= @competition.id %></td>
+            <td><%= @competition.try(:cid) %></td>
+            <td><%= @competition.try(:title) %></td>
+            <td><%= @competition.try(:abbr) %></td>
+            <td><%= @competition.try(:category) %></td>
+            <td><%= @competition.try(:game_format) %></td>
+            <td><%= @competition.try(:status) %></td>
+            <td><%= @competition.try(:status_str) %></td>
+          </tr>          
+        </tbody>
+      </table>
+      <table class="table table-responsive table-bordered">
+        <thead>
+          <tr>
+            <th>Season</th>
+            <th>DateStart</th>
+            <th>DateEnd</th>
+            <th>TotalMatches</th>
+            <th>TotalRounds</th>
+            <th>TotalTeams</th>
+            <th>Country</th>
+            <th>CreatedTime</th>            
+          </tr>
+        </thead>
+        <tbody>          
+          <tr>
+            <td><%= @competition.try(:season) %></td>
+            <td><%= @competition.try(:date_start) %></td>
+            <td><%= @competition.try(:date_end) %></td>
+            <td><%= @competition.try(:total_matches) %></td>
+            <td><%= @competition.try(:total_rounds) %></td>
+            <td><%= @competition.try(:total_teams) %></td>
+            <td><%= @competition.try(:country) %></td>
+            <td><%= @competition.try(:created_at).strftime("%d/%m/%Y %I:%M%p")  %></td> 
+          </tr>          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

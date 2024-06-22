@@ -1,0 +1,11 @@
+<div id="page-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="page-header">Editing Contest</h2>
+      <b><%= link_to 'Back', contests_path %></b>
+    </div>
+  </div>
+  <%= render 'form', contest: @contest %>
+  <b><%= link_to 'Back', contests_path %></b>
+</div>
+<%#= link_to 'Show', @contest %>

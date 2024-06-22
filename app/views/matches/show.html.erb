@@ -1,0 +1,67 @@
+<div id="page-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <p id="notice" style="color:orange;"><%= notice %></p>
+      <div class="col-lg-12">
+        <h2 class="page-header" style="margin: 10px 0 15px !important;">Showing Match Details</h2>        
+        <b><%= link_to 'Edit', edit_match_path(@match) %> |
+         <%= link_to 'Back', matches_path %></b>        
+      </div>
+      <table class="table table-responsive table-bordered">
+        <thead>
+          <tr>
+            <th>Id|Mid|Cid</th>
+            <th>Title</th>
+            <th>ShortTitle</th>
+            <th>Subtitle</th>
+            <th>Mnumber</th>
+            <th>mformat</th>
+            <th>mformatStr</th>
+            <th>mStatus</th>
+            <th>StatusStr</th>          
+          </tr>
+        </thead>
+        <tbody>          
+          <tr>
+            <td><%= @match.id %>|<%= @match.mid %>|<%= @match.cid %></td>
+            <td><%= @match.try(:title) %></td>
+            <td><%= @match.try(:short_title) %></td>
+            <td><%= @match.try(:subtitle) %></td>
+            <td><%= @match.try(:mnumber) %></td>
+            <td><%= @match.try(:mformat) %></td>
+            <td><%= @match.try(:mformat_str) %></td>            
+            <td><%= @match.try(:mstatus) %></td>
+            <td><%= @match.try(:mstatus_str) %></td>           
+          </tr>          
+        </tbody>
+      </table>
+      <table class="table table-responsive table-bordered">
+        <thead>
+          <tr>
+            <th>mstatus_note</th>
+            <th>domestic</th>
+            <th>odds_available</th>
+            <th>Winning%</th>
+            <th>Commission</th>
+            <th>Discount</th>
+            <th>Bonus</th>
+            <th>Status</th>            
+          </tr>
+        </thead>
+        <tbody>          
+          <tr>
+            <td><%= @match.try(:mstatus_note) %></td>
+            <td><%= @match.try(:domestic) %></td>
+            <td><%= @match.try(:odds_available) %></td>
+            <td><%= @match.try(:winning_percentage) %></td>            
+            <td><%= @match.try(:game_state) %></td>
+            <td><%= @match.try(:game_state_str) %></td>
+            <td><%= @match.try(:date_start) %></td>
+            <td><%= @match.try(:date_end) %></td> 
+          </tr>          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

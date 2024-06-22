@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Contest Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contest_categories.each do |contest_category| %>
+      <tr>
+        <td><%= link_to 'Show', contest_category %></td>
+        <td><%= link_to 'Edit', edit_contest_category_path(contest_category) %></td>
+        <td><%= link_to 'Destroy', contest_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contest Category', new_contest_category_path %>

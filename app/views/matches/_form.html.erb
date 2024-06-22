@@ -1,0 +1,49 @@
+<div class="container">
+    <%= form_with(model: match, local: true) do |form| %>
+    <% if match.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(match.errors.count, "error") %> prohibited this match from being saved:</h2>
+
+        <ul>
+          <% match.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            Basic Form Elements
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label>Title</label>
+                  <%= form.text_field :title, class: "form-control", placeholder: "Enter title", :required => true,:disabled => true %>
+                </div>
+                <div class="form-group">
+                  <label>Subtitle</label>
+                  <%= form.text_field :subtitle, class: "form-control", placeholder: "Enter description", :required => true,:disabled => true %>
+                </div>
+
+                <div class="form-group">
+                  <label>Status</label>
+                  <%= form.select :status, options_for_select([['Active', true], ['Pause', false]], selected: form.object.status),{}, {class: 'form-control'} %>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Record</button>
+                <button type="reset" class="btn btn-default">Reset Form</button>
+              </div>
+            </div>
+            <!-- /.row (nested) -->
+          </div>
+          <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+      </div>
+      <!-- /.col-lg-12 -->
+    </div>
+  <% end %>
+</div>

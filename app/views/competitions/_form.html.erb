@@ -1,0 +1,94 @@
+<%= form_with(model: competition, local: true) do |form| %>
+  <% if competition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(competition.errors.count, "error") %> prohibited this competition from being saved:</h2>
+
+      <ul>
+      <% competition.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <!-- /.row -->
+  <div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Basic Form Elements
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="form-group">
+              <label>Title</label>
+              <%= form.text_field :title, class: "form-control", placeholder: "Enter title", :required => true %>       
+            </div>
+            <div class="form-group">
+              <label>Abbr</label>
+              <%= form.text_field :abbr, class: "form-control", placeholder: "Enter abbr", :required => true %>
+            </div>
+            <div class="form-group">
+              <label>Category</label>
+              <%= form.text_field :category, class: "form-control", placeholder: "Enter category", :required => true %>
+            </div>
+            <div class="form-group">
+              <label>GameFormat</label>
+              <%= form.text_field :game_format, class: "form-control", placeholder: "Enter game format", :required => true %>
+            </div>
+            <div class="form-group">
+              <label>StatusStr</label>
+              <%= form.text_field :status_str, class: "form-control", placeholder: "Enter status str", :required => true %>
+            </div>
+            <div class="form-group">
+              <label>Status</label>
+              <%= form.select :status, options_for_select([['Active', true], ['Pause', false]], selected: form.object.status),{}, {class: 'form-control'} %>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Record</button>
+            <button type="reset" class="btn btn-default">Reset Form</button>
+          </div>
+
+          <!-- /.col-lg-6 (nested) -->
+          <div class="col-lg-6">
+            <div class="form-group">
+              <label>Country</label>
+              <%= form.text_field :country, class: "form-control", placeholder: "Enter country", :required => true %>
+            </div>
+            <div class="form-group">
+              <label>Season</label>
+              <%= form.text_field :season, class: "form-control", placeholder: "Enter season", :required => true %>
+            </div>
+            <div class="form-group">
+              <label>DateStart</label>
+              <%= form.text_field :date_start, class: "form-control", placeholder: "Enter date start", :required => true %>
+            </div>
+            <div class="form-group">
+              <label>DateEnd</label>
+              <%= form.text_field :date_end, class: "form-control", placeholder: "Enter date end", :required => true %>
+            </div>
+            <div class="form-group">
+              <label>TotalMatches</label>
+              <%= form.text_field :total_matches, class: "form-control", placeholder: "Enter total matches", :required => true %>
+            </div>
+            <div class="form-group">
+              <label>TotalRounds</label>
+              <%= form.text_field :total_rounds, class: "form-control", placeholder: "Enter total rounds", :required => true %>
+            </div>
+            <div class="form-group">
+              <label>TotalTeams</label>
+              <%= form.text_field :total_teams, class: "form-control", placeholder: "Enter total teams", :required => true %>
+            </div>                  
+          </div>
+          <!-- /.col-lg-6 (nested) -->
+        </div>
+        <!-- /.row (nested) -->
+      </div>
+      <!-- /.panel-body -->
+    </div>
+    <!-- /.panel -->
+  </div>
+  <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<% end %>

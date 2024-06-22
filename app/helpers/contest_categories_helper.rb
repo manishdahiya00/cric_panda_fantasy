@@ -1,0 +1,2 @@
+module ContestCategoriesHelper
+end

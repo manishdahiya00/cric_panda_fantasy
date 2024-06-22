@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Contests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_contests.each do |user_contest| %>
+      <tr>
+        <td><%= link_to 'Show', user_contest %></td>
+        <td><%= link_to 'Edit', edit_user_contest_path(user_contest) %></td>
+        <td><%= link_to 'Destroy', user_contest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Contest', new_user_contest_path %>
