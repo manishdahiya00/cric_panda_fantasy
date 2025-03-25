@@ -13,7 +13,7 @@ module API
         BLOCKED = "You Blocked, Max Limit"
         GBLOCKED = "Sorry! Scripts/Tricks not Allowed"
         INVALID_USER = 'Invalid UserId/Token'
-        TOKEN = ['3e0e77298ef32518821a2490c457300c','e9a8cd857f01e5f88127787d3931b63a']
+        TOKEN = ['***','****']
 
         included do
           prefix 'api'
