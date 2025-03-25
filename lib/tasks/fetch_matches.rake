@@ -1,17 +1,17 @@
-# API: https://rest.entitysport.com/v2/matches/?status=3&token=e9a8cd857f01e5f88127787d3931b63a
+# API: https://rest.entitysport.com/v2/matches/?status=3&token=****
 
 # company_name=justkhelo #https://github.com/krsdata/getset-admin
 #https://github.com/krsdata/getset-admin/blob/9c631e750caf88ee497387c1fc4dd11b33fb4138/app/Http/Controllers/Api/ApiController.php#L2193
-# https://rest.entitysport.com/v2/matches/?status=1&token=927192a7efcfb0e8d321a41412012af9
+# https://rest.entitysport.com/v2/matches/?status=1&token=*****
 
 #https://github.com/bhagwat007/f.1/blob/c921b4b5a784e7d1f206ca35e29c67ebacd5b9d7/app/src/main/java/com/example/myapplication/match_Activity.java
-# https://rest.entitysport.com/v2/matches/?status=1&token=3e0e77298ef32518821a2490c457300c
+# https://rest.entitysport.com/v2/matches/?status=1&token=****
 
 #upcoming = 1
 #completed = 2
 #live = 3
 #Cancelled = 4
-TOKEN = ['3e0e77298ef32518821a2490c457300c','e9a8cd857f01e5f88127787d3931b63a']
+TOKEN = ['***','***']
 
 namespace :fetch_matches do
   desc "Matches List Task"
