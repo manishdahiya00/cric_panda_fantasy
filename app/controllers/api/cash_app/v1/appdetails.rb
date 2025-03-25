@@ -520,7 +520,7 @@ module API
                 m = Match.find_by(id: params["matchId"])
                 require "rest-client"
                 apiurl =
-                  "https://rest.entitysport.com/v2/matches/#{m.mid}/newpoint2?token=3e0e77298ef32518821a2490c457300c"
+                  "https://rest.entitysport.com/v2/matches/#{m.mid}/newpoint2?token=****"
                 response = RestClient.get(apiurl, headers = { accept: :json })
                 match_data = JSON.parse(response)
                 # if m.mstatus_str == 'Completed'
@@ -593,7 +593,7 @@ module API
               mat = Match.find(params[:matchId])
               require "rest-client"
               apiurl =
-                "https://rest.entitysport.com/v2/matches/#{mat.mid}/newpoint2?token=3e0e77298ef32518821a2490c457300c"
+                "https://rest.entitysport.com/v2/matches/#{mat.mid}/newpoint2?token=*****"
               response = RestClient.get(apiurl, headers = { accept: :json })
               match_data = JSON.parse(response)
               # user = valid_user(params['userId'].to_i, params['securityToken'])
@@ -714,7 +714,7 @@ module API
           #         m = Match.find_by(id: params["matchId"])
           #         require "rest-client"
           #         apiurl =
-          #           "https://rest.entitysport.com/v2/matches/#{m.mid}/live?token=3e0e77298ef32518821a2490c457300c"
+          #           "https://rest.entitysport.com/v2/matches/#{m.mid}/live?token=****"
           #         response = RestClient.get(apiurl, headers = { accept: :json })
           #         match_data = JSON.parse(response)
           #         # if m.mstatus_str == 'Completed'
@@ -787,7 +787,7 @@ module API
           #       mat = Match.find(params[:matchId])
           #       require "rest-client"
           #       apiurl =
-          #         "https://rest.entitysport.com/v2/matches/#{mat.mid}/live?token=3e0e77298ef32518821a2490c457300c"
+          #         "https://rest.entitysport.com/v2/matches/#{mat.mid}/live?token=*****"
           #       response = RestClient.get(apiurl, headers = { accept: :json })
           #       match_data = JSON.parse(response)
           #       # user = valid_user(params['userId'].to_i, params['securityToken'])
@@ -1048,7 +1048,7 @@ module API
               mat = Match.find_by(id: params[:matchId].to_i)
               require "rest-client"
               apiurl =
-                "https://rest.entitysport.com/v2/matches/#{mat.mid}/newpoint2?token=3e0e77298ef32518821a2490c457300c"
+                "https://rest.entitysport.com/v2/matches/#{mat.mid}/newpoint2?token=****"
               response = RestClient.get(apiurl, headers = { accept: :json })
               match_data = JSON.parse(response)
               # user = valid_user(params['userId'].to_i, params['securityToken'])
