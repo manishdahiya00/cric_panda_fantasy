@@ -623,7 +623,7 @@ module API
 
               mat = Match.find(params[:matchId])
               require 'rest-client'
-              apiurl = "https://rest.entitysport.com/v2/matches/#{mat.mid}/newpoint2?token=3e0e77298ef32518821a2490c457300c"
+              apiurl = "https://rest.entitysport.com/v2/matches/#{mat.mid}/newpoint2?token=***"
               response = RestClient.get(apiurl, headers={accept: :json})
               match_data = JSON.parse(response)
               # user = valid_user(params['userId'].to_i, params['securityToken'])
